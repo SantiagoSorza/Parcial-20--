@@ -105,53 +105,12 @@ header {
 /* === CONTACTO === */
 .contacto {
   display: flex;
-  justify-content: space-between;
+  justify-content: center; /* Centra horizontalmente los dos bloques */
   align-items: flex-start;
-  padding: 60px 40px;
+  flex-wrap: wrap; /* Permite que se acomode en pantallas pequeñas */
+  gap: 80px; /* Espacio entre redes y formulario */
+  padding: 60px 20px;
   background-color: #ffffff;
-  gap: 40px;
-}
-
-.contacto h2 {
-  color: #1f2a44;
-  margin-bottom: 20px;
-  width: 100%;
-  text-align: center;
-}
-
-/* Lado izquierdo: redes sociales */
-.contacto::before {
-  content: "";
-}
-
-.contacto .redes {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.contacto .redes img {
-  width: 30px;
-  height: 30px;
-  cursor: pointer;
-  transition: opacity 0.3s;
-}
-
-.contacto .redes img:hover {
-  opacity: 0.7;
-}
-
-/*contacto*/
-.contacto {
-   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: flex-start;
-  padding:20px 40px;
-  background-color: #ffffff;
-  gap: 40px;
-  position: relative;
 }
 
 .contacto h2 {
@@ -161,34 +120,51 @@ header {
   margin-bottom: 30px;
 }
 
-.contacto form {
-  flex: 2;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  max-width: 300px;
-  margin-left: auto;
-  gap: 15px;
-}
-
-/*Redes sociales */
+/* Redes sociales */
 .contacto .redes {
   flex: 1;
+  min-width: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+}
+
+.contacto .redes h3 {
+  font-size: 1.3em;
+  color: #1f2a44;
+  margin-bottom: 10px;
+}
+
+.contacto .iconos-redes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.contacto .iconos-redes img {
+  width: 55px;
+  height: 50px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  cursor: pointer;
+}
+
+.contacto .iconos-redes img:hover {
+  transform: scale(1.1);
+  opacity: 0.85;
+}
+
+/* Formulario */
+.contacto form {
+  flex: 1;
+  min-width: 280px;
+  max-width: 320px;
   display: flex;
   flex-direction: column;
   gap: 15px;
-  align-items: flex-start;
-}
-
-.contacto .redes img {
-  width: 30px;
-  height: 30px;
-  cursor: pointer;
-  transition: opacity 0.3s;
-}
-
-.contacto .redes img:hover {
-  opacity: 0.7;
 }
 
 input, textarea {
@@ -211,6 +187,7 @@ button {
 button:hover {
   background-color: #324a7c;
 }
+
 
 .contacto .redes {
   flex: 1;
