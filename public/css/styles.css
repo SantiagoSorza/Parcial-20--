@@ -246,6 +246,14 @@ button:hover {
   transform: scale(1.1);
   opacity: 0.85;
 }
+.contacto {
+  justify-content: center; /* centra los dos bloques */
+}
+
+.contacto form {
+  margin-left: 0; /* elimina el empuje a la derecha */
+  margin-right: auto;
+}
 
 footer {
   background-color: #333;
